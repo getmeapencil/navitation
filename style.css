@@ -1,0 +1,305 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: rgba(128, 128, 128, 0.1);
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.5) 1px, 
+    transparent 1px
+  );
+  background-position: 50% 50%;
+  background-size: 1.1rem 1.1rem;
+
+  overflow: hidden;
+}
+
+.content {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#trailer {
+  width: 1rem;
+  aspect-ratio: 1;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  transition: transform 500ms linear;
+}
+
+body:hover > .content > #trailer {
+  opacity: 1;
+}
+
+#icon {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+#wrapper {
+  width: 90vmin;
+  aspect-ratio: 1.618;
+  position: relative;
+}
+
+#wrapper > .shape {
+  transition-property: left, top, height, width, border-radius;
+  transition-duration: 750ms;
+  transition-timing-function: ease;
+  position: absolute;
+}
+
+#wrapper > .shape:nth-child(1) {
+  background-color: #6561ac;
+}
+
+#wrapper > .shape:nth-child(2) {
+  background-color: #0087d2;
+}
+
+#wrapper > .shape:nth-child(3) {
+  background-color: #0eb24e;
+}
+
+#wrapper > .shape:nth-child(4) {
+  background-color: #fcb711;
+}
+
+#wrapper > .shape:nth-child(5) {
+  background-color: #292526;
+}
+
+#wrapper > .shape:nth-child(6) {
+  background-color: #cd004b;
+}
+
+#wrapper > .shape:nth-child(7) {
+  background-color: #f37023;
+}
+
+/*------------------ data-configuration = "1" ----------------------*/
+
+#wrapper[data-configuration = "1"] > .shape:nth-child(1) {
+  left: 0%;
+  top: 0%;
+  height: 50%;
+  width: 15%;
+}
+
+#wrapper[data-configuration = "1"] > .shape:nth-child(2) {
+  left: 0%;
+  top: 50%;
+  height: 50%;
+  width: 30%;
+}
+
+#wrapper[data-configuration = "1"] > .shape:nth-child(3) {
+  left: 15%;
+  top: 0%;
+  height: 50%;
+  width: 35%;
+}
+
+#wrapper[data-configuration = "1"] > .shape:nth-child(4) {
+  left: 30%;
+  top: 50%;
+  height: 50%;
+  width: 20%;
+}
+
+#wrapper[data-configuration = "1"] > .shape:nth-child(5) {
+  left: 50%;
+  top: 0%;
+  height: 100%;
+  width: 50%;
+}
+
+#wrapper[data-configuration = "1"] > .shape:nth-child(6) {
+  left: 70%;
+  top: 50%;
+  height: 50%;
+  width: 30%;
+}
+
+#wrapper[data-configuration = "1"] > .shape:nth-child(7) {
+  left: 85%;
+  top: 70%;
+  height: 30%;
+  width: 15%;
+}
+
+/*------------------ data-configuration = "2" ----------------------*/
+
+/* purple */
+#wrapper[data-configuration = "2"] > .shape:nth-child(1) {
+  left: 25%;
+  top: 0%;
+  height: 70%;
+  width: 10%;
+}
+
+/* blue */
+#wrapper[data-configuration = "2"] > .shape:nth-child(2) {
+  left: 10%;
+  top: 35%;
+  height: 65%;
+  width: 15%;
+}
+
+/* green */
+#wrapper[data-configuration = "2"] > .shape:nth-child(3) { 
+  left: 0%;
+  top: 20%;
+  height: 60%;
+  width: 10%;
+}
+
+/* yellow */
+#wrapper[data-configuration = "2"] > .shape:nth-child(4) {
+  left: 35%;
+  top: 10%;
+  height: 80%;
+  width: 20%;
+}
+
+/* black */
+#wrapper[data-configuration = "2"] > .shape:nth-child(5) {
+  left: 55%;
+  top: 0%;
+  height: 100%;
+  width: 25%;
+}
+
+/* pink */
+#wrapper[data-configuration = "2"] > .shape:nth-child(6) {
+  left: 80%;
+  top: 30%;
+  height: 55%;
+  width: 10%;
+}
+
+/* orange */
+#wrapper[data-configuration = "2"] > .shape:nth-child(7) {
+  left: 90%;
+  top: 50%;
+  height: 50%;
+  width: 10%;
+}
+
+/*------------------ data-configuration = "3" ----------------------*/
+
+/* purple */
+#wrapper[data-configuration = "3"] > .shape:nth-child(1) {
+  left: 25%;
+  top: 0%;
+  height: 10%;
+  width: 50%;
+}
+
+/* blue */
+#wrapper[data-configuration = "3"] > .shape:nth-child(2) {
+  left: 10%;
+  top: 35%;
+  height: 15%;
+  width: 50%;
+}
+
+/* green */
+#wrapper[data-configuration = "3"] > .shape:nth-child(3) { 
+  left: 0%;
+  top: 20%;
+  height: 20%;
+  width: 50%;
+}
+
+/* yellow */
+#wrapper[data-configuration = "3"] > .shape:nth-child(4) {
+  left: 35%;
+  top: 10%;
+  height: 25%;
+  width: 50%;
+}
+
+/* black */
+#wrapper[data-configuration = "3"] > .shape:nth-child(5) {
+  left: 50%;
+  top: 0%;
+  height: 30%;
+  width: 50%;
+}
+
+/* pink */
+#wrapper[data-configuration = "3"] > .shape:nth-child(6) {
+  left: 50%;
+  top: 30%;
+  height: 15%;
+  width: 50%;
+}
+
+/* orange */
+#wrapper[data-configuration = "3"] > .shape:nth-child(7) {
+  left: 90%;
+  top: 50%;
+  height: 10%;
+  width: 50%;
+}
+
+/*------------------ data-roundness = "1" ----------------------*/
+
+#wrapper[data-roundness = "1"] > .shape {
+  border-radius: 0rem;
+}
+
+/*------------------ data-roundness = "2" ----------------------*/
+
+#wrapper[data-roundness = "2"] > .shape {
+  border-radius: 5rem;
+}
+
+/*------------------ data-roundness = "3" ----------------------*/
+
+/* purple */
+#wrapper[data-roundness = "3"] > .shape:nth-child(1) {
+  border-radius: 0rem 0rem 0rem 10rem;
+}
+
+/* blue */
+#wrapper[data-roundness = "3"] > .shape:nth-child(2) {
+  border-radius: 0rem 50% 50% 0rem;
+}
+
+/* green */
+#wrapper[data-roundness = "3"] > .shape:nth-child(3) { 
+  border-radius: 5rem 5rem 5rem 5rem;
+}
+
+/* yellow */
+#wrapper[data-roundness = "3"] > .shape:nth-child(4) {
+  border-radius: 0rem 0rem 0rem 5rem;
+}
+
+/* black */
+#wrapper[data-roundness = "3"] > .shape:nth-child(5) {
+  border-radius: 0rem 50% 0rem 0rem;
+}
+
+/* pink */
+#wrapper[data-roundness = "3"] > .shape:nth-child(6) {
+  border-radius: 10rem 0rem 0rem 0rem;
+}
+
+/* orange */
+#wrapper[data-roundness = "3"] > .shape:nth-child(7) {
+  border-radius: 10rem 0rem 0rem 0rem;
+}
