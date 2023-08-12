@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('pageshow', function(e) {
   if (e.persisted) {
     isMousemoveActive = true;
+    trailer.style.width = "1rem";
+    trailer.style.height = "1rem";
     wrapper.addEventListener("click", scaleRedirect);
   }
 });
