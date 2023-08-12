@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('pageshow', function(e) {
   if (e.persisted) {
     isMousemoveActive = true;
-    trailer.animate( { width: "1rem", height: "1rem" }, {
+    trailer.animate( { top: "0", left: "0", height: "1rem", width: "1rem", borderRadius: "0.5rem", opacity: "0" }, {
       duration: 0,
       fill: "forwards"
     });
