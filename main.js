@@ -136,5 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
   content.style.display = 'grid';
 });
 
-window.addEventListener('beforeunload', function() {
+window.addEventListener('pageshow', function(e) {
+  if (e.persisted) {
+    resetDOMToInitialState();
+  }
 });
