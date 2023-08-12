@@ -40,7 +40,6 @@ const getSRC = type => {
   }
 }
 
-// Your mousemove function
 function handleMousemove(e) {
   if(!isMousemoveActive) return;
 
@@ -57,7 +56,6 @@ function handleMousemove(e) {
   }
 }
 
-// Add the mousemove event listener
 window.addEventListener('mousemove', handleMousemove);
 
 // ------------------------------------shape-animation-------------------------------------
