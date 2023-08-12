@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('pageshow', function(e) {
   if (e.persisted) {
-    resetDOMToInitialState();
+    isMousemoveActive = true;
+    wrapper.addEventListener("click", scaleRedirect);
   }
 });
