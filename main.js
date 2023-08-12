@@ -131,15 +131,18 @@ function scaleRedirect(e) {
 
 wrapper.addEventListener("click", scaleRedirect);
 
+let content = document.querySelector('.content');
+
 document.addEventListener('DOMContentLoaded', function() {
-  let content = document.querySelector('.content');
   content.style.display = 'grid';
 });
+
+
 
 window.addEventListener('pageshow', function(e) {
   if (e.persisted) {
     isMousemoveActive = true;
-    trailer.animate( { top: "0", left: "0", height: "1rem", width: "1rem", borderRadius: "0.5rem", opacity: "0" }, {
+    trailer.animate( { top: "0", left: "0", height: "1rem", width: "1rem", borderRadius: "0.5rem", opacity: "1" }, {
       duration: 0,
       fill: "forwards"
     });
