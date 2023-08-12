@@ -131,7 +131,10 @@ function scaleRedirect(e) {
 
 wrapper.addEventListener("click", scaleRedirect);
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
   let content = document.querySelector('.content');
   content.style.display = 'grid';
-};
+});
+
+window.addEventListener('beforeunload', function() {
+});
