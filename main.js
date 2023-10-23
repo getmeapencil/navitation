@@ -7,6 +7,12 @@ const icon = document.getElementById("icon");
 
 let isMousemoveActive = true;
 
+/**
+ * Animates the trailer element based on the mouse movement.
+ *
+ * @param {Event} e - The mousemove event object.
+ * @param {boolean} interacting - Indicates whether the user is interacting with the shapes.
+ */
 const animateTrailer = (e, interacting) => {
   if (!isMousemoveActive) return;
 
